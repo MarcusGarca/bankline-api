@@ -1,7 +1,6 @@
 package Model;
 
 import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -21,9 +20,12 @@ public class Movimentacao {
 	private LocalDateTime dataHora;
 	private String descricao;
 	private Double valor;
+	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
 
-	@Enumerated(EnumType.STRING)
+	/**
+	 * Gettrs and Settrs da classe Movimentacao
+	 */
 	public MovimentacaoTipo getTipo() {
 		return tipo;
 	}
@@ -32,9 +34,7 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 
-	/**
-	 * Gettrs and Settrs da classe Movimentacao
-	 */
+	
 	public Integer getId() {
 		return id;
 	}
