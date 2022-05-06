@@ -1,4 +1,4 @@
-package Model;
+package com.dio.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;
@@ -22,6 +22,8 @@ public class Movimentacao {
 	private Double valor;
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
+	@Column(name = "id_conta")
+	private Integer idConta;
 
 	/**
 	 * Gettrs and Settrs da classe Movimentacao
@@ -34,7 +36,6 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 
-	
 	public Integer getId() {
 		return id;
 	}
@@ -65,6 +66,14 @@ public class Movimentacao {
 
 	public void setValor(Double valor) {
 		this.valor = valor;
+	}
+
+	public Integer getIdConta() {
+		return idConta;
+	}
+
+	public void setIdConta(Integer idConta) {
+		this.idConta = idConta;
 	}
 
 }
