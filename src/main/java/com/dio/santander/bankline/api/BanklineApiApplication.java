@@ -13,3 +13,7 @@ public class BanklineApiApplication {
 	}
 
 }
+//globalmente
+//https://devweek-dio-santander-2022.herokuapp.com/swagger-ui.html
+//localmente
+//http://localhost:8080/swagger-ui/index.html
